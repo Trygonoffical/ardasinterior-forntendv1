@@ -3,18 +3,17 @@
 @tailwind utilities;
 
 :root {
+  /* --foreground-rgb: 255, 255, 255;
+  --background-start-rgb:  17, 24, 39;
+  --background-end-rgb:  17, 24, 39; */
+
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb:  255, 255, 255;
+  --background-end-rgb:  255 ,255 ,255;
+  /* --background-end-rgb:  238, 247, 255; */
+/* } */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -24,10 +23,22 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-family: "Mr Eaves XL Modern", sans-serif;
 }
 
+h1,h2,h3,h4,h5,h6{
+  font-family: "Mrs Eaves XL Serif";
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.carousel .control-prev.control-arrow:before {
+  border-right: 8px solid #000 !important;
+}
+
+.carousel .control-next.control-arrow:before {
+  border-left: 8px solid #000!important;
 }
